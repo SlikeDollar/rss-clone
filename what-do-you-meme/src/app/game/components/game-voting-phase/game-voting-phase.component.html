@@ -2,7 +2,9 @@
     <div class="vote-modal__container">
       <div class="vote-modal__meme" *ngFor="let meme of memes$ | async | keyvalue">
         <app-meme-card [memeImage]="meme.key" />
-        <div class="vote-modal__button form__btn" (click)="sendVote(uuid, meme.key)">Голосовать</div>
+        <button class="vote-modal__button form__btn"
+          (click)="sendVote(uuid, meme.key)"
+          [disabled]="isUserCard(meme.key) | async">Голосовать</button>
       </div>
     </div>
 </div>

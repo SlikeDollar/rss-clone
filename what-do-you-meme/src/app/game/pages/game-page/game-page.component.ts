@@ -113,6 +113,7 @@ export class GamePageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    this.modal.closeAll();
     this.gameSubs.unsubscribe();
     this.changeSubs.unsubscribe();
     this.errorSubs.unsubscribe();

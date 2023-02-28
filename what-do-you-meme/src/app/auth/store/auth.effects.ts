@@ -2,7 +2,6 @@ import { LocalStorageService } from '../../shared/storage/services/local-storage
 import { select } from '@ngrx/store';
 import { isAuth } from './auth.selectors';
 import { Store } from '@ngrx/store';
-import { AuthData } from './auth.reducer';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
@@ -19,6 +18,7 @@ import { catchError, filter, map, switchMap, tap } from 'rxjs/operators';
 import { of, timer, first, fromEvent } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import {Socket} from "ngx-socket-io";
+import { AuthData } from 'src/app/shared/model/authData';
 
 @Injectable()
 export class AuthEffects {

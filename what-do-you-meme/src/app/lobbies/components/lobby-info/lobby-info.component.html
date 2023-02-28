@@ -5,7 +5,6 @@
   </div>
   <h2 class="lobby__title">Имя лобби: {{ lobby.title }}</h2>
   <div class="lobby__head">
-    <div class="lobby__avatar" *ngIf="isPrivate">Приватное лобби</div>
     <div class="lobby__rounds">Количество раундов: {{ lobby.maxRounds }}</div>
     <div class="lobby__users-number">
       Игроки: {{ lobby.playersCount }} / {{ lobby.maxPlayers }}
@@ -15,6 +14,7 @@
     <div class="lobby__player" *ngFor="let player of lobby.players">
       <div class="lobby__avatar" appImage="{{player.image}}" title="{{player.username}}"></div>
     </div>
+    <div class="lobby__avatar" *ngIf="isPrivate">Приватное лобби</div>
   </div>
   <button class="btn lobby__btn" (click)="checkPrivate()" [disabled]="lobby.isFull">Присоединиться</button>
 </li>

@@ -1,9 +1,9 @@
-import {Component, Input} from '@angular/core';
-import {Router} from '@angular/router';
-import {LobbyService} from '../../services/lobby/lobby.service';
-import {LobbiesPrivacy, LobbyData} from 'src/app/lobbies/model/lobby-data';
-import {MatDialog} from "@angular/material/dialog";
-import {LobbyJoinComponent} from "../lobby-join-modal/lobby-join.component";
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { LobbyService } from '../../services/lobby/lobby.service';
+import { LobbiesPrivacy, LobbyData } from 'src/app/lobbies/model/lobby-data';
+import { MatDialog } from "@angular/material/dialog";
+import { LobbyJoinComponent } from "../lobby-join-modal/lobby-join.component";
 
 @Component({
   selector: 'app-lobby-info',

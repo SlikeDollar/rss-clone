@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GalleryService } from "../../services/gallery.service";
+import {GalleryService} from "../../services/gallery.service";
 @Component({
   selector: 'app-gallery-controls',
   templateUrl: './gallery-controls.component.html',
@@ -7,14 +7,15 @@ import { GalleryService } from "../../services/gallery.service";
 })
 export class GalleryControlsComponent {
   downloadItems$ = this.galleryService.downloadItems$
-  constructor(private galleryService: GalleryService) { }
+  constructor(private galleryService: GalleryService) {
+  }
 
   clearDownloadItems() {
     this.galleryService.clearDownloadItems();
   }
 
   downloadItems() {
-    this.galleryService.downloadItemsArr().subscribe((res) => { window.location.href = URL.createObjectURL(res) });
+    this.galleryService.downloadItemsArr().subscribe((res) => {window.location.href = URL.createObjectURL(res)});
     this.galleryService.clearDownloadItems();
   }
 }

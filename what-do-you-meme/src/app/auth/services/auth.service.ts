@@ -1,4 +1,3 @@
-import {AuthData} from '../store/auth.reducer';
 import {getAuthData} from '../store/auth.selectors';
 import {Store} from '@ngrx/store';
 import {JwtHelperService} from '@auth0/angular-jwt';
@@ -6,6 +5,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {distinctUntilChanged, map} from 'rxjs';
 import {ConfigService} from "../../shared/services/config/config.service";
+import { AuthData } from 'src/app/shared/model/authData';
 
 @Injectable({
   providedIn: 'root',

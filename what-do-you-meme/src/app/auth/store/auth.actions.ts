@@ -1,5 +1,5 @@
-import { AuthData } from './auth.reducer';
 import { createAction, props } from '@ngrx/store';
+import { AuthData } from 'src/app/shared/model/authData';
 
 export const login = createAction(
   '[Auth] login',

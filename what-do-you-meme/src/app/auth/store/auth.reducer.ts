@@ -1,4 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
+import { AuthData } from 'src/app/shared/model/authData';
 import {
   login,
   loginFailed,
@@ -7,15 +8,6 @@ import {
 } from './auth.actions';
 
 export const USER_AUTH_FEATURENAME = 'auth';
-
-export interface AuthData {
-  access_token: string;
-  username: string;
-  sub: number;
-  iat: number;
-  exp: number;
-  image: string;
-}
 
 export interface AuthState {
   loading: boolean;

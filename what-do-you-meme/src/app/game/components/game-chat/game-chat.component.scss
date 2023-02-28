@@ -9,7 +9,7 @@
   gap: 5px;
   width: 100%;
   max-height: 600px;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .chat__message {
@@ -22,6 +22,7 @@
   padding: 5px;
   border-radius: 5px;
   background-color: #382756;
+  word-wrap: break-word;
 }
 
 .chat {

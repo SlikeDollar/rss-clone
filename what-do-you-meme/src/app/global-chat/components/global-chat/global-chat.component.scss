@@ -20,7 +20,7 @@
 
   &__window {
     max-height: 500px;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   &__field {
@@ -28,6 +28,7 @@
     gap: 10px;
     align-items: flex-start;
     padding-bottom: 20px;
+    word-break: break-word;
   }
 
   &__form {
@@ -54,6 +55,7 @@
     gap: 10px;
     font-size: 20px;
     color: #fff;
+    word-wrap: break-word;
   }
 
   &__content {

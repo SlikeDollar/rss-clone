@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { GalleryService } from "../../services/gallery.service";
+import {Component, OnInit} from '@angular/core';
+import {GalleryService} from "../../services/gallery.service";
 
 @Component({
   selector: 'app-gallery-list',
@@ -13,11 +13,14 @@ export class GalleryListComponent implements OnInit {
     throttle: 4
   };
   galleryCards$ = this.galleryService.galleryCards$;
-  constructor(private galleryService: GalleryService) { }
+  constructor(private galleryService: GalleryService) {
+
+  }
 
   ngOnInit(): void {
-    this.galleryService.galleryItemsRequest();
+    this.galleryService.galleryItemsRequest;
   }
+
 
   onScrollDown() {
     this.galleryService.incrementPage();
