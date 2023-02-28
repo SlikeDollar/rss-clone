@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {ConfigService} from "../../shared/services/config/config.service";
-import {BehaviorSubject, Observable} from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { ConfigService } from "../../shared/services/config/config.service";
+import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +18,9 @@ export class GalleryService {
     limit: 12,
   }
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) { }
 
-  get galleryItemsRequest() {
+  galleryItemsRequest() {
     return this.http.get<string[]>(`${this.SERVER_URL}/file/images/meme`).subscribe(
       (items) => {
         this.galleryItems = items;
